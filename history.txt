@@ -1,0 +1,111 @@
+    1  ssh-keygen
+    2  cat $HOME/.ssh/*.pub
+    3  cd
+    4  mkdir repogit
+    5  cd repogit
+    6  git clone git@github.com:joaquin-i-j-Vargas/TP_AySO.git
+    7  sudo apt install git
+    8  git clone git@github.com:joaquin-i-j-Vargas/TP_AySO.git
+    9  cd TP_AySO
+   10  pwd
+   11  ls -l
+   12  cat/etc/os-release
+   13  cat /etc/os-release
+   14  man grep
+   15  grep HOME_URL/etc/os-release
+   16  grep HOME_URL /etc/os-release
+   17  grep home_url /etc/os-release
+   18  grep -i home_url /etc/os-release
+   19  whoami
+   20  echo "Usuario=$(whoami)" > datos_usuario.txt
+   21  git add .
+   22  git config --global user.email "vargas.i.joaquin@gmail.com"
+   23  git config --global user.email "joaquin-i-j-Vargas"
+   24  git commit -m "ADD: agregado 1er ejercicio sobre datos_usuarios.txt"
+   25  git status
+   26  git push
+   27  grep "model name" /proc/cpuinfo | head -n1 >> datos_usuario.txt
+   28  git add datos_usuario.txt
+   29  git commit -m "feat: Anadiendo informacion de CPU"
+   30  git push
+   31  cat <<EOF >> README.md
+   32  Alumno: Joaquin Vargas
+   33  Division: 315 
+   34  Turno: Noche
+   35  EOF
+   36  git add README.md datos_usuario.txt
+   37  git commit -m "ADD: Aniadiendo Readme y Datos de Usuario"
+   38  git push
+   39  history -a
+   40  lsblk
+   41  sudo fdisk /dev/sdb
+   42  sudo fdisk -l /dev/sdb
+   43  sudo fdisk /dev/sdc
+   44  sudo fdisk -l /dev/sdc
+   45  sudo fdisk /dev/sdd
+   46  sudo fdisk -l /dev/sdd
+   47  lsblk
+   48  sudo pvcreate /dev/sdb1 [200~/dev/sdb1 
+   49  sudo pvcreate /dev/sdb1 /dev/sdc1 /dev/sdd1
+   50  sudo pvd
+   51  sudo pvs
+   52  sudo vgcreate nodocentral /dev/sdb1 /dev/sdc1 /dev/sdd1
+   53  sudo vgs
+   54  sudo lvcreate -l 3g -n sitios nodocentral
+   55  sudo lvcreate -l 3G -n sitios nodocentral
+   56  sudo lvcreate -L 3G -n sitios nodocentral
+   57  sudo lvcreate -L 5G -n salvas nodocentral
+   58  sudo lvs
+   59  sudo vgs
+   60  sudo lvextend -L 4G /dev/nodocentral/sitios
+   61  sudo lvs
+   62  sudo mkfs.ext4 /dev/nodocentral/sitios
+   63  sudo mkfs.ext4 /dev/nodocentral/salvas
+   64  sudo mkdir /mnt/sitios
+   65  sudo mkdir /mnt/salvas
+   66  sudo mount /dev/nodocentral/sitios /mnt/sitios
+   67  sudo mount /dev/nodocentral/salvas /mnt/salvas
+   68  lsblk
+   69  echo "Archivo de prueva" > /mnt/sitios/prueba.txt
+   70  sudo echo "Archivo de prueva" > /mnt/sitios/prueba.txt
+   71  echo "Archivo de prueva"
+   72  sudo echo "Archivo de prueva" >> /mnt/sitios/prueba.txt
+   73  sudo echo "Archivo de prueva" | sudo tee /mnt/sitios/prueba.txt
+   74  ls -l /mnt/sitios
+   75  cat /mnt/sitios/prueba.txt
+   76  lsblk
+   77  sudo unmount /mnt/sitios 
+   78  sudo umount /mnt/sitios 
+   79  sudo umount /mnt/salvas
+   80  lsblk
+   81  sudo lvremove /dev/nodocentral/sitios
+   82  sudo lvremove -y  /dev/nodocentral/sitios
+   83  sudo lvs
+   84  sudo lvremove -y /dev/nodocentral/salvas
+   85* 
+   86* 
+   87  sudo vgs
+   88  lsblk
+   89  sudo pvremove /dev/sdb1
+   90  sudo pvremove /dev/sdc1
+   91  sudo pvremove /dev/sdd1
+   92  sudo pvs
+   93  lsblk
+   94  sudo fdisk /dev/sdd
+   95  lsblk
+   96  sudo mkfs.ext4 /dev/sdd1
+   97  sudo mkfs.ext4 /dev/sdd2
+   98  sudo mkfs.ext4 /dev/sdd3
+   99  sudo mkfs.ext4 /dev/sdd4
+  100  sudo mkfs.ext4 /dev/sdd5
+  101  sudo mkfs.ext4 /dev/sdd6
+  102  sudo mkdir /mnt/{p1,p2,p3,p4,p5,p6}
+  103  sudo mount /dev/sdd1 /mnt/p1
+  104  sudo mount /dev/sdd2 /mnt/p2
+  105  sudo mount /dev/sdd3 /mnt/p3
+  106  sudo mount /dev/sdd4 /mnt/p4
+  107  sudo mount /dev/sdd5 /mnt/p5
+  108  sudo mount /dev/sdd6 /mnt/p6
+  109  df -h
+  110  lsblk
+  111  history > history.txt
